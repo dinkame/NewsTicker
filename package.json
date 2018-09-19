@@ -1,5 +1,5 @@
 {
-  "name": "tpa-demo-app-jQuery",
+  "name": "News-Ticker-jQuery",
   "version": "0.0.1",
   "scripts": {
     "start": "node server.js"
