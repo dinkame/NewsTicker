@@ -5,7 +5,7 @@
     "start": "npm install && node server.js && node-sass"
   },
   "dependencies": {
-    "jquery": "^3.0.0",
+    "jquery": "^3.3.1",
     "lodash": "^3.10.1",
     "mustache": "^2.2.1",
     "react": "^0.13.0",
