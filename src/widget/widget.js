@@ -1,9 +1,9 @@
-require('./widget.scss')
+import './widget.scss';
 
-var Wix = require('Wix')
-var $ = require('jquery')
+import { addEventListener, Events, setHeight, getSiteMap, navigateToPage } from 'Wix';
+import $ from 'jquery';
 
-Wix.addEventListener(Wix.Events.SETTINGS_UPDATED, onSettingsUpdate);
+addEventListener(Events.SETTINGS_UPDATED, onSettingsUpdate);
 // You can get the style params programmatically, un-comment the following snippet to see how it works:
 /*Wix.Styles.getStyleParams(style => {
  console.log(style);
@@ -23,7 +23,7 @@ function onSettingsUpdate(update) {
 
 function updateCompHeight(height) {
     const desiredHeight = height || document.documentElement.scrollHeight;
-    Wix.setHeight(desiredHeight);
+    setHeight(desiredHeight);
 }
 
 function stringify(input) {
@@ -36,8 +36,8 @@ function stringify(input) {
 
 $(document).ready(() => {
   $('.navtohome').click(() => {
-    Wix.getSiteMap(pages => {
-      Wix.navigateToPage(pages[0].pageId.substring(1));
+    getSiteMap(pages => {
+      navigateToPage(pages[0].pageId.substring(1));
     });
     console.log('navigated');
   });
