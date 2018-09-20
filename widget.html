@@ -8,80 +8,88 @@
     <script src="//static.parastorage.com/services/js-sdk/1.91.0/js/wix.min.js"></script>
     <link rel="stylesheet" href="src/widget/widget.css"/>
     <script src="dist/widget.js"></script>
-
-    <style wix-style>
-        .wix-style-sample {
-            background: {{style._backgroundColor color-1}};
-        }
-        .sample-title {
-            {{style._titleFont Heading-L}}
-            color: {{style._titleColor color-5}};
-        }
-        .sample-settings-title{
-          {{style._titleFont Heading-L}}
-          color: {{style._titleColor color-5}};
-          display: none;
-        }
-        .sample-content {
-            {{style._descFont Body-M}}
-            color: {{style._descColor color-4}};
-        }
-        .sample-button {
-            cursor: pointer;
-            background: {{style._btnBgColor color-8}};
-            color: {{style._btnTextColor color-1}};
-            {{style._btnFont Body-M}}
-        }
-        .sample-button:hover {
-            opacity: 0.8;
-        }
-        .sample-input {
-            {{style._inputFont Body-M}}
-            border:1px solid black;
-            background: {{style._inputFieldBackground color-4}};
-            color: {{style._inputColor color-1}};
-        }
-        .sample-input::placeholder {
-          color: {{style._inputColor color-1}};
-          opacity: 0.7;
-        }
-        a {
-          color: {{style._linkColor color-8}};
-          text-decoration: underline;
-          cursor:pointer;
-        }
-        a:hover {
-          opacity: 0.8;
-          text-decoration: none;
-        }
-        body {
-          border:1px solid {{style._borderColor color-2}};
-        }
-        hr {
-          background-color: {{style._hrColor color-2}};
-          height: 1px; border: 0;
-        }
-    </style>
 </head>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.easing.min.js"></script>
+<script type="text/javascript" src="../jquery.easy-ticker.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var dd = $('.vticker').easyTicker({
+		direction: 'up',
+		easing: 'easeInOutBack',
+		speed: 'slow',
+		interval: 2000,
+		height: 'auto',
+		visible: 1,
+		mousePause: 0,
+		controls: {
+			up: '.up',
+			down: '.down',
+			toggle: '.toggle',
+			stopText: 'Stop !!!'
+		}
+	}).data('easyTicker');
+	
+	cc = 1;
+	$('.aa').click(function(){
+		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
+		cc++;
+	});
+	
+	$('.vis').click(function(){
+		dd.options['visible'] = 3;
+		
+	});
+	
+	$('.visall').click(function(){
+		dd.stop();
+		dd.options['visible'] = 0 ;
+		dd.start();
+	});
+	
+});
+</script>
+
+<style>
+        .vticker{
+            border: 1px solid red;
+            width: 400px;
+        }
+        .vticker ul{
+            padding: 0;
+        }
+        .vticker li{
+            list-style: none;
+            border-bottom: 1px solid green;
+            padding: 10px;
+        }
+        .et-run{
+            background: red;
+        }
+        </style>
+
 <body>
-<div id="root">
     <div>
-            <div class="wix-style-sample">
-                <h3 class="sample-element sample-title">Demo App</h3>
-                <p class="sample-element sample-content">Welcome to Demo App, let's play!</p>
-                <form class="form">
-                    <input title="email" type="email" class="sample-element sample-input" placeholder="I'm an email text field!" >
-                </form>
-                <button class="sample-element sample-button">Click me!</button>
-                <br/>
-                <a class="navtohome">Go to Homepage</a>
-                <br/>
-                <hr/>
-                <h3 class="sample-element sample-settings-title">Last settings update</h3>
-                <pre>
-                    <code class="json sample-content"></code>
-                </pre>
-            </div>
+            <button class="aa">ADD</button>
+            <button class="vis">SET VISIBLE 3</button>
+            <button class="visall">SET VISIBLE ALL</button>
+            
+            <button class="up">UP</button>
+            <button class="down">DOWN</button>
+            <button class="toggle">TOGGLE</button>
+            
+            <div class="vticker">
+                <ul>
+                    <li>Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
+                    <li>List 2</li>
+                    <li>List 3</li>
+                    <li>List 4</li>
+                    <li>List 5 </li>
+                    <li class="ww">Hey... Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
+                </ul>
+            </div>       
     </div>
 </body>
 </html>
