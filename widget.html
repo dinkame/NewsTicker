@@ -19,10 +19,10 @@ $(document).ready(function(){
 	var dd = $('.vticker').easyTicker({
 		direction: 'up',
 		easing: 'easeInOutBack',
-		speed: 'slow',
+		speed: 'fast',
 		interval: 2000,
 		height: 'auto',
-		visible: 1,
+		visible: 3,
 		mousePause: 0,
 		controls: {
 			up: '.up',
@@ -33,21 +33,6 @@ $(document).ready(function(){
 	}).data('easyTicker');
 	
 	cc = 1;
-	$('.aa').click(function(){
-		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
-		cc++;
-	});
-	
-	$('.vis').click(function(){
-		dd.options['visible'] = 3;
-		
-	});
-	
-	$('.visall').click(function(){
-		dd.stop();
-		dd.options['visible'] = 0 ;
-		dd.start();
-	});
 	
 });
 </script>
@@ -72,22 +57,14 @@ $(document).ready(function(){
 
 <body>
     <div>
-            <button class="aa">ADD</button>
-            <button class="vis">SET VISIBLE 3</button>
-            <button class="visall">SET VISIBLE ALL</button>
-            
-            <button class="up">UP</button>
-            <button class="down">DOWN</button>
-            <button class="toggle">TOGGLE</button>
-            
             <div class="vticker">
                 <ul>
-                    <li>Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
-                    <li>List 2</li>
-                    <li>List 3</li>
-                    <li>List 4</li>
-                    <li>List 5 </li>
-                    <li class="ww">Hey... Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
+                    <li>Site News</li>
+                    <li>News 1</li>
+                    <li>News 2</li>
+                    <li>News 3</li>
+                    <li>News 4 </li>
+                    <li>News 5 </li>
                 </ul>
             </div>       
     </div>
