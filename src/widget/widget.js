@@ -1,7 +1,7 @@
 //import './widget.scss';
 
-import { addEventListener, Events, setHeight, getSiteMap, navigateToPage } from 'Wix';
-import $ from 'jquery';
+var Wix = require('Wix')
+var $ = require('jquery')
 
 addEventListener(Events.SETTINGS_UPDATED, onSettingsUpdate);
 // You can get the style params programmatically, un-comment the following snippet to see how it works:
