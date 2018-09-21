@@ -1,4 +1,4 @@
-import './widget.scss';
+//import './widget.scss';
 
 import { addEventListener, Events, setHeight, getSiteMap, navigateToPage } from 'Wix';
 import $ from 'jquery';
