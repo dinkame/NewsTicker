@@ -3,7 +3,7 @@
 var $ = require('jQuery');
 var Wix = require('wix');
 
-addEventListener(Events.SETTINGS_UPDATED, onSettingsUpdate);
+addEventListener(Wix.Events.SETTINGS_UPDATED, Wix.onSettingsUpdate);
 // You can get the style params programmatically, un-comment the following snippet to see how it works:
 /*Wix.Styles.getStyleParams(style => {
  console.log(style);
