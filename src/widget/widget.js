@@ -1,7 +1,6 @@
 //import './widget.scss';
 
-import 'jquery';
-var $ = require('jquery')
+var $ = require('jQuery')
 
 import 'wix';
 var Wix = require('Wix');
