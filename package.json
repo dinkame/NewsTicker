@@ -2,7 +2,7 @@
   "name": "News-Ticker-jQuery",
   "version": "0.0.1",
   "scripts": {
-    "start": "npm install && node server.js && node-sass && jQuery && wix"
+    "start": "npm install && node server.js && node-sass && jQuery && jquery-ui && wix"
   },
   "dependencies": {
     "jquery": "^3.3.1",
