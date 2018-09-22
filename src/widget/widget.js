@@ -1,9 +1,7 @@
 //import './widget.scss';
 
 var $ = require('jQuery')
-
-import 'wix';
-var Wix = require('Wix');
+var Wix = require('Wix')
 
 addEventListener(Events.SETTINGS_UPDATED, onSettingsUpdate);
 // You can get the style params programmatically, un-comment the following snippet to see how it works:
